@@ -1,7 +1,11 @@
-# Coding Challenge for a backend.
+# Web Crawler Base.
 
-Build a simple API that scrape a site.
+A modularized web crawler built with Node.js / Express.js, Puppeteer.js and Kue.js. Puppeteer provides the functionality that allows it to scrape an Instagram users' profile information,
+and Kue provides the functionality to continuously scrape a user's profile every 2 mins for 10 scrapes.
 
+The modular nature of this web crawler lends itself to easy pivoting in terms of both which target site it should scrape, and what information it should look for.
+
+More web crawler features and functionality will be added to this base.  
 I put up this challenge on [CODEWARS](http://codewars.com) (was rated about 2 kata) a year ago and became really popular among the community of hackers. It was a short challenge that took 2 - 3 hours and most developers had fun building it and continue to use it for other everyday purposes. The idea and concept of it applies to real life applications that are relevant in today's data-driven world.
 
 - Language: Javascript
@@ -32,37 +36,45 @@ Understand data process.
 In order to be a good developer, you must know the lifecycle of every data/parameter/variable you use and HOW, WHY, WHEN they change. This is just simple data process question. That's why you must parse all the data you scrape into a readible JSON format.
 
 ### Instructions:
+
 Build two routes: **GET:{baseUrl}/user_profile** and **GET:{baseUrl}/user_profile_continue**
 
 Please upload to a server. AWS, Digital Ocean, Heroku, you're own IP Address, etc...it doesn't matter as long as it works somewhere.
 
 ### Part 1:
+
 Parameter: username  
-Tools (You don't have to use these. You may use different ones or add more if you'd like):  
+Tools (You don't have to use these. You may use different ones or add more if you'd like):
+
 - cheerio
 - puppeteer
 - $q
 
 {baseUrl}/user_profile will scrape for user information and returns a JSON formatted response. For example:
+
 ```
 {
   data: {
-    "username": "unumdesign",
-    "fullName": "Jack Beanstalk",
+    "username": "kingjames",
+    "fullName": "Lebron James",
     "imageUrl": "profileimage.orsomething.com",
-    "followers": 123,
-    "following": 12345
+    "followers": 3.2M,
+    "following": 123,
+    "posts": 204
   }
 }
 ```
+
 You may provide more information if you'd like but those are the most important ones.
 
 **Errors:**
 If there are errors such as "no users exist" or "private users" please handle them correctly.
 
 ### Part 2:
+
 Parameter: username  
 Tools (You don't have to use these. You may use different ones or add more if you'd like):
+
 - cheerio
 - puppeteer
 - $q
@@ -70,50 +82,44 @@ Tools (You don't have to use these. You may use different ones or add more if yo
 
 GET:{baseUrl}/user_profile_continue will do the same thing BUT it will continue to scrape and console.log out the response every 2 minutes.
 
-The response won't matter. What matters is the console.log output on the terminal that shows the response every 2 minutes and should end after the 10th output. Please use KUE or any other automation for this step.
-
 For example this is what it should show on the terminal:
+
 ```
 After 2 minutes...
 {
   data: {
-    "username": "unumdesign",
-    "fullName": "Jack Beanstalk",
+    "username": "kingjames",
+    "fullName": "Lebron James",
     "imageUrl": "profileimage.orsomething.com",
-    "followers": 123,
-    "following": 12345
+    "followers": 3.2M,
+    "following": 123,
+    "posts": 204
   }
 }
 
 After 2 minutes...
 {
   data: {
-    "username": "unumdesign",
-    "fullName": "Jack Beanstalk",
+    "username": "kingjames",
+    "fullName": "Lebron James",
     "imageUrl": "profileimage.orsomething.com",
-    "followers": 123,
-    "following": 12345
+    "followers": 3.2M,
+    "following": 123,
+    "posts": 204
   }
 }
 
 After 2 minutes...
 {
   data: {
-    "username": "unumdesign",
-    "fullName": "Jack Beanstalk",
+    "username": "kingjames",
+    "fullName": "Lebron James",
     "imageUrl": "profileimage.orsomething.com",
-    "followers": 123,
-    "following": 12345
+    "followers": 3.2M,
+    "following": 123,
+    "posts": 204
   }
 }
 
 and so on...
 ```
-**Errors:***
-If there are errors such as "no users exist" or "private users" please handle them correctly.
-
-
-## When you are completed, please create a pull request!
-If you have any other questions, please put them in the ISSUES.
-
-# HAVE FUN!!
