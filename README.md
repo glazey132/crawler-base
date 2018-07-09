@@ -9,7 +9,7 @@ More web crawler features and functionality will be added to this base.
 
 # Routes
 
-{baseUrl}/user_profile will scrape for user information and returns a JSON formatted response. For example:
+- GET:{baseUrl}/user_profile will scrape for user information and returns a JSON formatted response. For example:
 
 ```
 {
@@ -24,22 +24,7 @@ More web crawler features and functionality will be added to this base.
 }
 ```
 
-You may provide more information if you'd like but those are the most important ones.
-
-**Errors:**
-If there are errors such as "no users exist" or "private users" please handle them correctly.
-
-### Part 2:
-
-Parameter: username  
-Tools (You don't have to use these. You may use different ones or add more if you'd like):
-
-- cheerio
-- puppeteer
-- $q
-- kue
-
-GET:{baseUrl}/user_profile_continue will do the same thing BUT it will continue to scrape and console.log out the response every 2 minutes.
+- GET:{baseUrl}/user_profile_continue will do the same thing BUT it will continue to scrape and console.log out the response every 2 minutes.
 
 For example this is what it should show on the terminal:
 
