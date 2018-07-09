@@ -1,4 +1,4 @@
-# Web Crawler Base.
+# Web Crawler Base
 
 A modularized web crawler built with Node.js / Express.js, Puppeteer.js and Kue.js. Puppeteer provides the functionality that allows it to scrape an Instagram users' profile information,
 and Kue provides the functionality to continuously scrape a user's profile every 2 mins for 10 scrapes.
