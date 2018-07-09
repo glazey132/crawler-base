@@ -1,0 +1,19 @@
+{
+  "name": "backend-challenge",
+  "version": "1.0.0",
+  "description": "Build a simple API that scrape a site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unumdesign/backend-challenge.git"
+  },
+  "author": "alex glaze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unumdesign/backend-challenge/issues"
+  },
+  "homepage": "https://github.com/unumdesign/backend-challenge#readme"
+}
