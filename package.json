@@ -4,8 +4,8 @@
   "description": "Build a simple API that scrapes a site.",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/sccrawler/index.js",
-    "start": "node src/sccrawler/index.js",
+    "dev": "nodemon src/igcrawler/index.js",
+    "start": "node src/igcrawler/index.js",
     "lint": "eslint src/**/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
