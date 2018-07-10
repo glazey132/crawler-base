@@ -12,7 +12,6 @@ const puppeteer = require('puppeteer');
 
 //initialize express server, set port and set kui ui port.
 let app = express();
-let port = 8080;
 kue.app.listen(3000);
 
 //this is the base url we will scrape
@@ -179,6 +178,6 @@ app.get('/user_profile_continue/:profileName', async function(req, res) {
   });
 });
 
-app.listen(port || 8080, () =>
-  console.log(`Example app listening on port ${port}!`)
+app.listen(process.env.port || 8080, () =>
+  console.log(`scraper app listening on port 8080!`)
 );
