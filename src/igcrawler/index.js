@@ -31,7 +31,9 @@ app.get('/user_profile/:profileName', async function(req, res) {
 
   try {
     //launch puppeteer in headless mode to navigate to baseurl and begin scraping.
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
     const page = await browser.newPage();
 
     //set user agent to blend in.
