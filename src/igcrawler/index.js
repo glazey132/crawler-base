@@ -15,6 +15,10 @@ kue.app.listen(3000);
 //this is the base url we will scrape
 let baseUrl = 'https://instagram.com';
 
+app.get('/', function(req, res) {
+  res.json({ success: true, message: 'welcome to your webscraper' });
+});
+
 /*
 //Route to get users profile userInfo
 */
@@ -112,7 +116,7 @@ app.get('/user_profile_continue/:profileName', async function(req, res) {
 
   /*
   //function that handles kue userscrape jobs.
-  //concurrency set to 2 in case old jobs are present 
+  //concurrency set to 2 in case old jobs are present
   */
   queue.process('userScrape', 2, async function(job, done) {
     console.log('processing user scrape... ', job.data);
