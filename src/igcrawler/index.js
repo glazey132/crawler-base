@@ -3,7 +3,10 @@ const express = require('express');
 const path = require('path');
 const axios = require('axios');
 const kue = require('kue'),
-  queue = kue.createQueue();
+  queue = kue.createQueue({
+    redis:
+      'redis://redistogo:b8967e8f0488e440662aeb0f6a7731b1@cod.redistogo.com:11544/'
+  });
 const cheerio = require('cheerio');
 const puppeteer = require('puppeteer');
 
