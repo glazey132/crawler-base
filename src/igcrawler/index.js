@@ -179,5 +179,5 @@ app.get('/user_profile_continue/:profileName', async function(req, res) {
 });
 
 app.listen(process.env.PORT || 8080, () =>
-  console.log(`scraper app listening on port 8080!`)
+  console.log(`scraper app listening on port 8080*!*!`)
 );
