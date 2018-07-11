@@ -55,7 +55,7 @@ app.get('/user_profile/:profileName', async function(req, res) {
       });
     } else {
       //wait for the css content to be ready on page before scraping
-      await page.waitForSelector('._6q-tv');
+      await page.waitForSelector('.-nal3');
 
       let userInfo = [];
 
