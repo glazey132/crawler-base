@@ -147,7 +147,7 @@ app.get('/user_profile_continue/:profileName', async function(req, res) {
           error: `User: ${profileName} does not exist. Please wait 30 seconds and submit a valid username`
         });
       } else {
-        await page.waitForSelector('._6q-tv');
+        await page.waitForSelector('.-nal3');
 
         let userInfo = [];
 
