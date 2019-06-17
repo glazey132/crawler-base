@@ -151,7 +151,7 @@ app.get('/user_profile_continue/:profileName', async function(req, res) {
 
         let userInfo = [];
 
-        const handle = await page.$eval('.AC5d8', handle => handle.innerText);
+        const handle = await page.$eval('.fDxYl', handle => handle.innerText);
         const fullName = await page.$eval(
           '.rhpdm',
           fullName => fullName.innerText

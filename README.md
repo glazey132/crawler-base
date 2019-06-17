@@ -9,7 +9,7 @@ More web crawler features and functionality will be added to this base.
 
 # Routes
 
-- GET:{baseUrl}/user_profile will scrape for user information and returns a JSON formatted response. For example:
+- GET:{baseUrl}/user_profile (ex: https://ig-crawler-64678.herokuapp.com/user_profile/kingjames) will scrape for user information and returns a JSON formatted response. For example:
 
 ```
 {
@@ -24,7 +24,7 @@ More web crawler features and functionality will be added to this base.
 }
 ```
 
-- GET:{baseUrl}/user_profile_continue will do the same thing BUT it will continue to scrape and console.log out the response every 2 minutes.
+- GET:{baseUrl}/user_profile_continue (ex: https://ig-crawler-64678.herokuapp.com/user_profile_continue/kingjames) will do the same thing BUT it will continue to scrape and console.log out the response every 2 minutes.
 
 For example this is what it should show on the terminal:
 
