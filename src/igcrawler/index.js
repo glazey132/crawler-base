@@ -60,7 +60,7 @@ app.get('/user_profile/:profileName', async function(req, res) {
       let userInfo = [];
 
       //scrape relevant data
-      const handle = await page.$eval('.AC5d8', handle => handle.innerText);
+      const handle = await page.$eval('.fDxYl', handle => handle.innerText);
       const fullName = await page.$eval(
         '.rhpdm',
         fullName => fullName.innerText
